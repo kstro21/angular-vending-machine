@@ -1,0 +1,14 @@
+<div class="vending-machine-time text-center pb-2 border" [class.selected]="selected">
+  <button type="button" class="btn position-relative" (click)="onClick()" [disabled]="soldOut">
+    <img alt="{{ item.name }}" [src]="item.image" class="img-fluid" />
+    <span
+      class="position-absolute top-0 translate-middle badge rounded-pill"
+      [ngClass]="soldOut ? 'bg-secondary' : 'bg-success'"
+    >
+      {{ item.quantity }}
+    </span>
+  </button>
+  <div>
+    <span class="price">{{ item.price | currency }}</span>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.btn:disabled {
+  border-color: #fff;
+}
+
+.btn:disabled img {
+  filter: grayscale();
+}
+
+.vending-machine-time.selected {
+  animation: shaking-selected 0.75s linear infinite;
+}

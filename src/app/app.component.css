@@ -1,0 +1,7 @@
+.vending-machine-outlet img {
+  width: 46px;
+}
+
+.vending-machine-outlet button.sold {
+  animation: shaking-selected 0.75s linear infinite;
+}

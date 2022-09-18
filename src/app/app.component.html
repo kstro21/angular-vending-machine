@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h3 class="text-center">Vending Machine</h3>
+    <div class="col-12 col-sm-7 col-md-6 col-lg-4 col-xl-3">
+      <div class="row">
+        <div class="col-4 mb-3" *ngFor="let item of items$ | async; trackBy: trackByItems">
+          <app-vending-machine-item
+            [item]="item"
+            [selected]="item.id === selectedItem?.id && !soldItem"
+            (selectItem)="onItemSelected(item)"
+          ></app-vending-machine-item>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <app-vending-machine-slot
+            [totalAmount]="balance"
+            (changeAmount)="updateBalance($event)"
+          ></app-vending-machine-slot>
+        </div>
+        <div class="col-6">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <div class="vending-machine-outlet text-center my-2">
+              <button
+                type="button"
+                class="btn"
+                (click)="grabItem()"
+                [disabled]="!selectedItem || !soldItem"
+                [class.sold]="soldItem"
+              >
+                <img
+                  *ngIf="selectedItem && soldItem"
+                  alt="{{ selectedItem.name }}"
+                  [src]="selectedItem.image"
+                  class="img-fluid"
+                />
+                <span [hidden]="soldItem">When ready, get your item here!</span>
+              </button>
+            </div>
+            <div class="vending-machine-change text-center mb-3">
+              <div>
+                <span>{{ balanceChange | currency }}</span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="getChange()"
+                [disabled]="balanceChange === 0"
+              >
+                Get your change
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

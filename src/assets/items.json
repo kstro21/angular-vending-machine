@@ -1,0 +1,65 @@
+[
+  {
+    "id": "item-1",
+    "name": "Coca Cola",
+    "image": "/assets/images/cocacola.png",
+    "quantity": 10,
+    "price": 1.8
+  },
+  {
+    "id": "item-2",
+    "name": "Pepsi",
+    "image": "/assets/images/pepsi.png",
+    "quantity": 15,
+    "price": 1.8
+  },
+  {
+    "id": "item-3",
+    "name": "Fuze Tea",
+    "image": "/assets/images/tea.png",
+    "quantity": 0,
+    "price": 1.5
+  },
+  {
+    "id": "item-4",
+    "name": "El Pibe",
+    "image": "/assets/images/bolis.png",
+    "quantity": 2,
+    "price": 1.2
+  },
+  {
+    "id": "item-5",
+    "name": "Milk Chocolate",
+    "image": "/assets/images/chocolate.png",
+    "quantity": 9,
+    "price": 2.2
+  },
+  {
+    "id": "item-6",
+    "name": "Dasani",
+    "image": "/assets/images/dasani-lemon.png",
+    "quantity": 8,
+    "price": 1.2
+  },
+  {
+    "id": "item-7",
+    "name": "Snickers Bites",
+    "image": "/assets/images/snickers.png",
+    "quantity": 14,
+    "price": 1.2
+  },
+  {
+    "id": "item-8",
+    "name": "Doritos",
+    "image": "/assets/images/doritos.png",
+    "quantity": 14,
+    "price": 2.4
+  },
+  {
+    "id": "item-9",
+    "name": "Kisses",
+    "image": "/assets/images/kisses.png",
+    "quantity": 14,
+    "price": 2.4
+  }
+]
